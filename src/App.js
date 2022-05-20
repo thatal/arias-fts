@@ -1,4 +1,6 @@
-import "./App.css";
+import "./assets/css/argon-dashboard-react.css";
+import React from "react";
+
 import Header from "./MyComponents/Header";
 import { Signin } from "./MyComponents/Signin";
 import { Signup } from "./MyComponents/Signup";
