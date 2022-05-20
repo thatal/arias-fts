@@ -1,21 +1,34 @@
 import "./App.css";
 import Header from "./MyComponents/Header";
-// import Content from './MyComponents/Content';
-import { Head } from "./MyComponents/Head";
 import { Signin } from "./MyComponents/Signin";
-import {Signup} from './MyComponents/Signup';
-import Nav from './MyComponents/Nav';
+import { Signup } from "./MyComponents/Signup";
 
- 
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <div className="container">
-        <Nav/>     
-        <div className="App">
-          {/* <Signup /> */}
-        </div>
+      <div className="App">
+        <Header title={" Title of the Project"} />
       </div>
+      <Router>
+        <Routes>
+          {/* <Route exact path="/" element={<h1>Home Page</h1>} /> */}
+          {/* <Route exact path="page1" element={<Page1 />} /> */}
+          <Route exact path="signup" element={<Signup />} />
+          <Route exact path="signin" element={<Signin />} />
+        </Routes>
+        <div className="list">
+          <ul>
+            <li>
+              <Link to="signup">Sign Up</Link>
+            </li>
+            <li>
+              <Link to="signin">Sign In</Link>
+            </li>
+          </ul>
+        </div>
+      </Router>
     </>
   );
 }

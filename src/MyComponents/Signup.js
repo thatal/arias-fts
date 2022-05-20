@@ -16,10 +16,6 @@ export const Signup = () => {
 
         <label className="label">Password</label>
         <input className="input" type="password" />
-
-        <button className="btn" type="submit">
-          Sign Up
-        </button>
         <div>
           {/* <button className="btn"> Go to Sign In</button> */}
         </div>
