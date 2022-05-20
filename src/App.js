@@ -1,7 +1,9 @@
 import "./assets/css/argon-dashboard-react.css";
+import "./assets/plugins/nucleo/css/nucleo.css";
 import React from "react";
 
-import Header from "./MyComponents/Header";
+// import Header from "./MyComponents/Header";
+import NavBars from "./MyComponents/NavBars";
 import { Signin } from "./MyComponents/Signin";
 import { Signup } from "./MyComponents/Signup";
 
@@ -11,7 +13,7 @@ function App() {
   return (
     <>
       <div className="App">
-        <Header title={" Title of the Project"} />
+        <NavBars/>
       </div>
       <Router>
         <Routes>
@@ -20,7 +22,7 @@ function App() {
           <Route exact path="signup" element={<Signup />} />
           <Route exact path="signin" element={<Signin />} />
         </Routes>
-        <div className="list">
+        {/* <div className="list">
           <ul>
             <li>
               <Link to="signup">Sign Up</Link>
@@ -29,7 +31,7 @@ function App() {
               <Link to="signin">Sign In</Link>
             </li>
           </ul>
-        </div>
+        </div> */}
       </Router>
     </>
   );
